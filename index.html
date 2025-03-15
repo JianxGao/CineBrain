@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="CineBrain: A Large-Scale Multi-Modal Brain Dataset During Naturalistic Audiovisual Narrative Processing">
-  <meta name="keywords" content="fMRI, 3D Reconstruction">
+  <meta name="keywords" content="fMRI, EEG, Video Reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CineBrain</title>
 
@@ -127,7 +127,7 @@
 <!--                </a>-->
 <!--              </span>-->
               <span class="link-block">
-                <a href=" "
+                <a href="https://arxiv.org/abs/2503.06940"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -135,34 +135,15 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-             <!-- <span class="link-block">-->
-               <!-- <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fab fa-youtube"></i>-->
-<!--                  </span>-->
-<!--                  <span>Video</span>-->
-<!--                </a>-->
-<!--              </span> -->
-              <!-- <span class="link-block">
-                <a href="https://huggingface.co/datasets/Fudan-fMRI/fMRI-Shape"
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Fudan-fMRI/CineBrain"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-database"></i>
                   </span>
-                  <span>fMRI-Shape</span>
+                  <span>CineBrain</span>
                   </a>
-              </span> -->
-              <!-- <span class="link-block">
-                <a href="https://huggingface.co/datasets/Fudan-fMRI/fMRI-Objaverse"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-database"></i>
-                  </span>
-                  <span>fMRI-Objaverse</span>
-                  </a>
-              </span> -->
+              </span>
               <span class="link-block">
                 <a href="https://jianxgao.github.io/CineBrain"
                    class="external-link button is-normal is-rounded is-dark">
@@ -231,33 +212,50 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Reconstruction</h2>
+        <div class="content has-text-justified">
+          <center>
+            <img src="./imgs/video_res.jpg" width="100%"/>
+          </center>
+          <p>
+Qualitative comparison of our method with baselines. We compare the results of CineSync, CineSync-fMRI, and CineSync-EEG with the ground truth (GT). CineSync demonstrates higher accuracy, greater temporal consistency, and improved video quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-<!-- 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-@misc{gao2023mind3d,
-  title={MinD-3D: Reconstruct High-quality 3D objects in Human Brain}, 
-  author={Jianxiong Gao and Yuqian Fu and Yun Wang and Xuelin Qian and Jianfeng Feng and Yanwei Fu},
-  year={2023},
-  eprint={2312.07485},
+@misc{gao2025cinebrain,
+  title={CineBrain: A Large-Scale Multi-Modal Brain Dataset During Naturalistic Audiovisual Narrative Processing}, 
+  author={Jianxiong Gao and Yichang Liu and Baofeng Yang and Jianfeng Feng and Yanwei Fu},
+  year={2025},
+  eprint={2503.06940},
   archivePrefix={arXiv},
-  primaryClass={cs.CV}
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2503.06940}, 
 }
     </code></pre>
   </div>
-</section> -->
+</section>
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="https://arxiv.org/abs/2312.07485">
+         href="https://arxiv.org/abs/2503.06940">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/JianxGao/MinD-3D" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/JianxGao/CineBrain" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
