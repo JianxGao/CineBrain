@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="CineBrain: A Large-Scale Multi-Modal Brain Dataset During Naturalistic Audiovisual Narrative Processing">
+        content="CineBrain: A Large-Scale Multi-Modal Audiovisual Brain Dataset for Brain-Conditioned Video Generation">
   <meta name="keywords" content="fMRI, EEG, Video Reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CineBrain</title>
@@ -27,7 +27,6 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
@@ -41,8 +40,12 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar cine-navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
+    <a class="navbar-item cine-wordmark" href="./">
+      <img src="imgs/cine_icon.png" alt="CineBrain icon">
+      <span>CineBrain</span>
+    </a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -50,85 +53,58 @@
     </a>
   </div>
   <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    <div class="navbar-start">
       <a class="navbar-item" href="https://jianxgao.github.io/">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+        <span class="icon"><i class="fas fa-home"></i></span>
       </a>
     </div>
-
+    <div class="navbar-end">
+      <a class="navbar-item" href="#abstract">Abstract</a>
+      <a class="navbar-item" href="#framework">Framework</a>
+      <a class="navbar-item" href="#reconstruction">Reconstruction</a>
+      <a class="navbar-item" href="#BibTeX">BibTeX</a>
+    </div>
   </div>
 </nav>
 
 
-<section class="hero">
+<section class="hero publication-hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <!-- <h1 class="title is-1 publication-title">
-            <div style="display: flex; align-items: center;">
-              <span class="icon">
-                <img src="imgs/cine_icon.png" alt="Icon" style="margin-right: 10px; transform: scale(2.2);">
-              </span>
-              <span class="first-line">
-                CineBrain: A Large-Scale Multi-Modal Brain 
-              </span>
-            </div>
-            <div class="rest-lines">
-              Dataset During Naturalistic Audiovisual Narrative Processing
-            </div>
-          </h1>
-           -->
-          <h1 class="title is-1 publication-title" style="position: relative;">
-            <span class="icon">
-              <img src="imgs/cine_icon.png" alt="Icon" style="margin-right: 25px; transform: scale(2.2); position: relative; top: -5px;">
-            </span>
-            CineBrain: A Large-Scale Multi-Modal Brain Dataset During Naturalistic Audiovisual Narrative Processing
+        <div class="column has-text-centered publication-header">
+          <div class="venue-badge">CVPR 2026 Oral &amp; Best Paper Award Candidate</div>
+          <h1 class="title is-1 publication-title">
+            CineBrain: A Large-Scale Multi-Modal Audiovisual Brain Dataset for Brain-Conditioned Video Generation
           </h1>
 
-          <!-- <h1 class="title is-1 publication-title">CineBrain: A Large-Scale Multi-Modal Brain Dataset During Naturalistic Audiovisual Narrative Processing</h1> -->
-          <!-- <h2><font color="gray" size="5">ECCV 2024</font></h2> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://jianxgao.github.io/">Jianxiong Gao</a>,
+              <a href="https://jianxgao.github.io/">Jianxiong Gao<sup>1</sup></a>,
             </span>
             <span class="author-block">
-              <div>Yichang Liu, </div>
+              Yichang Liu<sup>1</sup>,
             </span>
             <span class="author-block">
-              <div>Baofeng Yang, </div>
-              <!-- <a href="https://yikai-wang.github.io/"></a>, -->
-            </span>
+              Baofeng Yang<sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.dcs.warwick.ac.uk/~feng/">Jianfeng Feng</a>,
+              <a href="https://www.dcs.warwick.ac.uk/~feng/">Jianfeng Feng<sup>1</sup></a>,
             </span>
             <span class="author-block">
-              <a href="http://yanweifu.github.io/">Yanwei Fu</a><sup>*</sup>
+              <a href="http://yanweifu.github.io/">Yanwei Fu</a><sup>1,2,†</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Fudan University
+            <span class="author-block"><sup>1</sup>Fudan University</span>
+            <span class="author-block"><sup>2</sup>Shanghai Innovation Institute</span>
           </div>
-
-          <div class="column has-text-centered">
+          <div class="publication-actions has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-<!--              <span class="link-block">-->
-<!--                <a href="https://arxiv.org/abs/1908.01491"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fas fa-file-pdf"></i>-->
-<!--                  </span>-->
-<!--                  <span>Paper</span>-->
-<!--                </a>-->
-<!--              </span>-->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2503.06940"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark cta-button">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -137,16 +113,16 @@
               </span>
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/Fudan-fMRI/CineBrain"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark cta-button">
                   <span class="icon">
                       <i class="fas fa-database"></i>
                   </span>
-                  <span>CineBrain</span>
+                  <span>Data</span>
                   </a>
               </span>
               <span class="link-block">
-                <a href="https://jianxgao.github.io/CineBrain"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/JianxGao/CineBrain"
+                   class="external-link button is-normal is-rounded is-dark cta-button">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -164,10 +140,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <center>
-        <img src="./imgs/teaser.jpg" width="100%"/>
-      </center>
-      <p>
+      <figure class="media-figure teaser-figure">
+        <img src="./imgs/teaser.jpg" alt="CineBrain dataset teaser showing synchronized audiovisual stimuli and brain recordings">
+      </figure>
+      <p class="teaser-caption">
         To leverage the complementary strengths of fMRI and EEG, CineBrain provides simultaneous audiovisual stimuli to participants while recording their EEG and fMRI signals. Engaging narrative-driven content from the television series The Big Bang Theory is utilized to facilitate the study of complex brain dynamics and multimodal neural decoding.
       </p>
     </div>
@@ -175,73 +151,15 @@
 </section>
 
 
-<table align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-spacing: 0; font-size: 0;">
-  <tr style="line-height:0;">
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/007562.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/007572.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/007584.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/007673.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-  </tr>
-  <tr style="line-height:0;">
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/007714.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/007882.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/008078.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-    <td style="padding:0; vertical-align: top;">
-      <video style="display: block; max-width:100%; max-height:300px;" muted autoplay loop>
-        <source src="imgs/008090.mp4" type="video/mp4">
-        浏览器不支持该视频标签.
-      </video>
-    </td>
-  </tr>
-</table>
 
-
-
-<section class="section">
+<section class="section paper-section" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-four-fifths section-panel">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this paper, we introduce <b>CineBrain</b>, the first large-scale dataset featuring simultaneous EEG and fMRI recordings during dynamic audiovisual stimulation. Recognizing the complementary strengths of EEG's high temporal resolution and fMRI's deep-brain spatial coverage, CineBrain provides approximately six hours of narrative-driven content from the popular television series <i>The Big Bang Theory</i> for each of six participants.
-            Building upon this unique dataset, we propose <b>CineSync</b>, an innovative multimodal decoding framework integrates a Multi-Modal Fusion Encoder with a diffusion-based Neural Latent Decoder. Our approach effectively fuses EEG and fMRI signals, significantly improving the reconstruction quality of complex audiovisual stimuli. To facilitate rigorous evaluation, we introduce <b>Cine-Benchmark</b>, a comprehensive evaluation protocol that assesses reconstructions across semantic and perceptual dimensions. 
-            Experimental results demonstrate that CineSync achieves state-of-the-art video reconstruction performance and highlight our initial success in combining fMRI and EEG for reconstructing both video and audio stimuli. 
+            Most research decoding brain signals into images, often using them as priors for generative models, has focused only on visual content. This overlooks the brain's natural ability to integrate auditory and visual information; for instance, sound strongly influences how we perceive visual scenes. To investigate this, we propose a new task of reconstructing continuous video stimuli from multimodal brain signals recorded during audiovisual stimulation. To enable this, we introduce CineBrain, the first large-scale dataset that synchronizes fMRI and EEG during audiovisual viewing, featuring six hours of <i>The Big Bang Theory</i> episodes for cross-modal alignment. We also conduct the first systematic exploration of combining fMRI and EEG for video reconstruction and present CineSync, a framework for reconstructing dynamic video using a Multi-Modal Fusion Encoder and a Neural Latent Decoder. CineSync achieves state-of-the-art performance in dynamic reconstruction, leveraging the complementary strengths of fMRI and EEG to improve visual fidelity. Our analysis shows that auditory cortical activations enhance decoding accuracy, highlighting the role of auditory input in visual perception.
           </p>
         </div>
       </div>
@@ -250,16 +168,35 @@
 </section>
 
 
-<section class="section">
+<section class="section paper-section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-four-fifths section-panel">
+        <h2 class="title is-3">Encoder Exploration</h2>
+        <div class="content has-text-justified">
+          <figure class="media-figure">
+            <img src="./imgs/Encoder_exploration.png" alt="Architectural exploration for integrating fMRI and EEG">
+          </figure>
+          <p class="figure-caption">
+            <b>Architectural exploration for integrating fMRI and EEG.</b> We compare five encoder variants, each adopting a distinct fusion
+mechanism to integrate the complementary information from fMRI and EEG signals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section paper-section" id="framework">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths section-panel">
         <h2 class="title is-3">Framework</h2>
         <div class="content has-text-justified">
-          <center>
-            <img src="./imgs/framework.jpg" width="100%"/>
-          </center>
-          <p>
+          <figure class="media-figure">
+            <img src="./imgs/framework.png" alt="Overview of the CineSync framework">
+          </figure>
+          <p class="figure-caption">
             <b>Overview of the CineSync Framework.</b>
             CineSync first employs a Multimodal Fusion Encoder to extract features from fMRI and EEG data, with a modality alignment module to align these features with semantic information. Subsequently, it utilizes a LoRA-tuned neural latent decoder to reconstruct videos based on the fused brain features. <i>Note: The gray box is used only during training.</i>
           </p>
@@ -269,16 +206,16 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section paper-section" id="reconstruction">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-four-fifths section-panel">
         <h2 class="title is-3">Reconstruction</h2>
         <div class="content has-text-justified">
-          <center>
-            <img src="./imgs/video_res.jpg" width="100%"/>
-          </center>
-          <p>
+          <figure class="media-figure">
+            <img src="./imgs/video_res.jpg" alt="Qualitative reconstruction comparison between CineSync and baselines">
+          </figure>
+          <p class="figure-caption">
             <b>Qualitative comparison of our method with baselines.</b> We compare the results of CineSync, CineSync-fMRI, and CineSync-EEG with the ground truth (GT). CineSync demonstrates higher accuracy, greater temporal consistency, and improved video quality.
           </p>
         </div>
@@ -288,12 +225,12 @@
 </section>
 
 
-<section class="section" id="BibTeX">
+<section class="section paper-section bibtex-section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
 @misc{gao2025cinebrain,
-  title={CineBrain: A Large-Scale Multi-Modal Brain Dataset During Naturalistic Audiovisual Narrative Processing}, 
+  title={CineBrain: A Large-Scale Multi-Modal Audiovisual Brain Dataset for Brain-Conditioned Video Generation}, 
   author={Jianxiong Gao and Yichang Liu and Baofeng Yang and Jianfeng Feng and Yanwei Fu},
   year={2025},
   eprint={2503.06940},
@@ -312,7 +249,7 @@
          href="https://arxiv.org/abs/2503.06940">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/JianxGao/CineBrain" class="external-link" disabled>
+      <a class="icon-link external-link" href="https://github.com/JianxGao/CineBrain">
         <i class="fab fa-github"></i>
       </a>
     </div>
